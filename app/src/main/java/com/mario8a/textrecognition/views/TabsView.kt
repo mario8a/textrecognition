@@ -41,8 +41,8 @@ fun TabsView(
             }
         }
         when (selectedTab) {
-            0 -> GalleryView(viewModel)
-            1 -> CameraView(viewModel)
+            0 -> GalleryView(viewModel).apply { viewModel.cleanText() }
+            1 -> CameraView(viewModel).apply { viewModel.cleanText() }
             2 -> CollectionGalleryView()
 
         }
